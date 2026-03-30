@@ -1,16 +1,16 @@
-# miniworld: 从零训练个人千万级参数大模型（最小闭环）
+# miniworld: 从零训练个人千万级参数大模型（最小数据量【非hugging face】数据闭环）
 
-这是一个面向个人开发者的大模型训练任务仓库（本项目参考minimind）：  
-**不依赖外部大模型 API**，在本地完成「Tokenizer -> 预训练 -> SFT -> 推理」全流程，得到你自己的模型权重。
+这是一个面向个人开发者的大模型训练任务仓库（项目制minimind）：  
+**不依赖外部大模型 API**，在本地完成「Tokenizer -> 预训练 -> SFT -> 推理」全流程，得到模型权重。
 
 > 目标优先级：先跑通，再提效果。  
-> 你最终会得到一个约 **2600 万参数（26M）** 级别的个人模型权重（`hidden_size=512, layers=8` 配置）。
+> 最终会得到一个约 **2600 万参数（26M）** 级别的个人模型权重（`hidden_size=512, layers=8` 配置）。
 
 ---
 
 ## 1. 产物
 
-- 本地可训练、可推理的 `MiniMind` 小模型
+- 本地可训练、可推理的 `MiniWorld` 小模型
 - 一套完整训练产物：
   - `model/tokenizer.json`
   - `out/pretrain_tiny_512.pth`
@@ -60,7 +60,7 @@ pixi run python -c "import torch; print(torch.__version__); print(torch.version.
 
 ---
 
-## 3. 最快生成 tiny 数据集（离线，不用下载hugging face大语料数据集）
+## 3. 构建 tiny 数据集（离线，不用下载hugging face大语料数据集）
 
 在项目根目录执行：
 
@@ -129,7 +129,7 @@ pixi run python trainer/train_full_sft.py `
   --num_workers 0
 ```
 
-### 4.4 推理验证（你自己的模型）
+### 4.4 推理验证
 
 ```powershell
 pixi run python eval_llm.py `
@@ -179,13 +179,13 @@ pixi run python eval_llm.py `
 - 增加 LoRA / DPO / PPO / 蒸馏 / MoE 实验
 - 逐步从“能跑通”走向“能用且好用”
 
-# miniworld: 从零训练个人千万级参数大模型（最小闭环）
+# miniworld: 从零训练个人千万级参数大模型（最小数据量闭环）
 
 这是一个面向个人开发者的训练任务仓库：  
 **不依赖外部大模型 API**，在本地完成「Tokenizer -> 预训练 -> SFT -> 推理」全流程，得到你自己的模型权重。
 
 > 目标优先级：先跑通，再提效果。  
-> 你最终会得到一个约 **2600 万参数（26M）** 级别的个人模型权重（`hidden_size=512, layers=8` 配置）。
+> 最终会得到一个约 **2600 万参数（26M）** 级别的个人模型权重（`hidden_size=512, layers=8` 配置）。
 
 ---
 
