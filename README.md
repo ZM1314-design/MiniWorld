@@ -241,7 +241,7 @@ pixi run python -c "import torch; print(torch.__version__); print(torch.version.
 
 ---
 
-## 3. 最快生成 tiny 数据集（离线，不用下载大语料）
+## 3. 最快构建 tiny 数据集（离线，不用下载大语料）
 
 在项目根目录执行：
 
