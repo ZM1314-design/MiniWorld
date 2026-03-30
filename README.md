@@ -310,7 +310,7 @@ pixi run python trainer/train_full_sft.py `
   --num_workers 0
 ```
 
-### 4.4 推理验证（你自己的模型）
+### 4.4 推理验证
 
 ```powershell
 pixi run python eval_llm.py `
@@ -322,7 +322,7 @@ pixi run python eval_llm.py `
 
 ---
 
-## 5. 最容易出现的操作失误（重点）
+## 5. 最容易出现的操作失误（个人训练体验）
 
 1. **装成 CPU 版 torch**
    - 现象：`torch.__version__` 显示 `+cpu`，`CUDA available: False`
