@@ -4,6 +4,8 @@
 这是一个面向个人开发者的大模型训练任务仓库：  
 **不依赖外部大模型 API**，在本地完成「Tokenizer -> 预训练 -> SFT -> 推理」全流程，得到模型全参数权重。
 
+> num_hidden_layers=24、hidden_size=896、num_attention_heads=14、num_key_value_heads=2（GQA）、max_position_embeddings=32768（长上下文）、rope_theta=1000000.0（RoPE）
+
 ---
 
 ## 1. 产物
