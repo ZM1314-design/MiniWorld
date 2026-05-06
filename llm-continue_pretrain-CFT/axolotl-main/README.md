@@ -1,6 +1,6 @@
-# Qwen-0.5B 农业语料继续预训练（DAPT / Continued Pretraining）
+# 0.4B基模 农业语料继续预训练（DAPT / Continued Pretraining）
 
-这个仓库用于在 **单卡 RTX 4090（24GB）** 上，对本地的 **Qwen-0.5B 基座模型**进行**继续预训练（Domain-Adaptive Pretraining, DAPT）**，语料为农业领域纯文本（多 `.txt` 文件，UTF-8）。
+这个仓库用于在 **单卡 RTX 4090（24GB）** 上，对本地的 **0.4B 基座模型**进行**继续预训练（Domain-Adaptive Pretraining, DAPT）**，语料为农业领域纯文本（多 `.txt` 文件，UTF-8）。
 
 训练方式是 **continued pretraining（非 SFT 指令微调）**：直接对原始领域文本做语言模型训练。
 
